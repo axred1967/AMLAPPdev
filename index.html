@@ -135,8 +135,8 @@ Text angular
         <div ng-if="main.login==true">
           <!-- Page Content -->
           <main class="mdl-layout__content">
-              <div id="ui-loader" class="center2" ng-show="main.loader==true" id="loader_img" >&nbsp;
-                <img   style="height:50px;width:50px;margin-top:20px" src="img/loader2.gif"  />
+              <div id="ui-loader" class="animsition-loading" ng-show="main.loader==true" id="loader_img" >&nbsp;
+
               </div>
               <div  id="ui-content"  ui-view ng-hide="main.loader==true" class="  account-data add-customer-data " ng-cloak> <!-- text fields -->
               </div>
@@ -198,6 +198,7 @@ Text angular
             <div class="mdl-card mdl-shadow--2dp mdl-color--primary mdl-color-text--blue-grey-50 drawer-profile">
               <div class="mdl-card__title user dark-blue-bg">
                 <center>AMLAPP Service <br/></center>
+                <span ng-if="agent.id>0" id="Profileimageagencyusername" class="user-name">{{agent.agencyName}}</span>
                 <center><img ng-show="agent.imageurl.length>0" id="Profileimageagencyuser" ng-src="{{agent.imageurl}}" alt="" />
                   <span  id="Profileimageagencyusername" class="user-name">{{agent.name}}</span>
                   <span  id="Profileimageagencyuseremail" class="user-mail">{{agent.email}}</span>
@@ -233,8 +234,8 @@ Text angular
 
 
           &nbsp;
-          <div id="ui-loader" class="center2" ng-show="main.loader==true" id="loader_img" >&nbsp;
-            <img   style="height:50px;width:50px;margin-top:20px" src="img/loader2.gif"  />
+          <div id="ui-loader" class="animsition-loading" ng-show="main.loader==true" id="loader_img" >&nbsp;
+
           </div>
           <div  id="ui-content"  ui-view ng-hide="main.loader==true" class="  account-data add-customer-data content-data-ax" ng-cloak> <!-- text fields -->
           </div>
@@ -247,7 +248,7 @@ Text angular
 <dialog class="mdl-dialog docCanvasDialog">
   <div id="docCanvasContainer" class= "docCanvasContainer">
     <div style="margin:10px">
-      <img class="loadImg loader"  src ="img/loading_image.gif" ></img>
+      <img class="loadImg loader"  src ="img/loading_image.gif?ver=1.1.0" ></img>
       <div id="containerCanvasDoc"  style="display:none">
 
         <canvas style="margin-left:-25px" id="DocCanvas">
